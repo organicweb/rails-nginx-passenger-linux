@@ -1,0 +1,6 @@
+check process exim with pidfile /var/run/exim4/exim.pid
+   group mail
+   start program = "/etc/init.d/exim4 start"
+   stop  program = "/etc/init.d/exim4 stop"
+   if failed port 25 protocol smtp then restart
+   if 5 restarts within 5 cycles then timeout

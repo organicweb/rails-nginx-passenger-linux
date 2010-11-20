@@ -1,0 +1,15 @@
+set daemon  180
+set logfile syslog facility log_daemon
+set mailserver localhost
+set mail-format {
+        from: monit@tolix.fr
+        subject: [monit] $SERVICE: $EVENT
+}
+set eventqueue basedir /home/var/monit slots 100
+set alert fabrice+monit@sofa-design.net
+set httpd port 2823
+  allow localhost
+# set httpd port 9999 and
+#         allow user:pass
+
+include /etc/monit/conf.d/*

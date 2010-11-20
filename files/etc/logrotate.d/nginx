@@ -1,0 +1,10 @@
+/opt/nginx/logs/*.log {
+    daily
+    rotate 4
+    missingok
+    sharedscripts
+    compress
+    postrotate
+      test ! -f /opt/nginx/logs/nginx.pid || kill -USR1 `cat /opt/nginx/logs/nginx.pid`
+    endscript
+}

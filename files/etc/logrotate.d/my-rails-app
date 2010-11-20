@@ -1,0 +1,11 @@
+/home/deploy/app/shared/log/*.log {
+  daily
+  missingok
+  rotate 30
+  compress
+  delaycompress
+  sharedscripts
+  postrotate
+    touch /home/deploy/app/current/tmp/restart.txt
+  endscript
+}

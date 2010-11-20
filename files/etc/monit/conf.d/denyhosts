@@ -1,0 +1,4 @@
+check process denyhosts with pidfile /var/run/denyhosts.pid
+	start program "/etc/init.d/denyhosts start"
+	stop program "/etc/init.d/denyhosts stop"
+	group root
