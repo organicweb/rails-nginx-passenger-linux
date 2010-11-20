@@ -16,7 +16,7 @@ Sur le serveur
 
 Sur le client:
 
-    cat ~/.ssh/id_rsa.pub | ssh tibadmin@92.243.30.65 "cat - >> ~/.ssh/authorized_keys"
+    cat ~/.ssh/id_rsa.pub | ssh myuser@serversip "cat - >> ~/.ssh/authorized_keys"
     
 Serveur
 
